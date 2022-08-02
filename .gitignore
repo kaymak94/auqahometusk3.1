@@ -43,3 +43,4 @@
  !**/src/test/**gi
 /.idea/
 /build/
+/.gradle/

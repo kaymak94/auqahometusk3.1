@@ -27,13 +27,12 @@ class OrderCardTest {
     @Test
     void shouldReturnPositiveMsgTest() {
         driver.get("http://localhost:9999");
-        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Павлов Сергей");
-        driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79614365879");
+        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Сергеев Виктор");
+        driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79613456787");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
-        driver.findElement(By.cssSelector("[type='button']")).click();
-        String text = driver.findElement(By.cssSelector("[data-test-id=='order-success']")).getText();
+        driver.findElement(By.cssSelector("[type ='button']")).click();
+        String text = driver.findElement(By.cssSelector("[data-test-id='order-success']")).getText();
         Assertions.assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", text.trim());
-
 
     }
 
